@@ -1,6 +1,6 @@
 # Dotfiles
 
-Dotfiles for my preferred local development set up.
+Personal dev set up
 
 ## Installation
 
