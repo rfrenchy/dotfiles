@@ -1,10 +1,13 @@
 # Dotfiles
 
-Personal dev set up
+- dev env setup scripts
 
-## Installation
+## macOS
+
+TODO
+
+## Windows
 
 ``` 
-   git clone https://github.com/rfrenchy/dotfiles.git
    ./init.ps1
 ```
