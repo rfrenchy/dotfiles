@@ -1,6 +1,26 @@
+[user]
+	name = rfrenchy
+	email = ryanfrench@outlook.com # change this if needed
 [alias]
-	# View abbreviated SHA, description, and history graph of the latest 20 commits.
-	l = log --pretty=oneline -n 20 --graph --abbrev-commit	
-    st = status -s
-    ch = checkout
-    amend = commit --amend --reuse-message=HEAD
+	br = branch
+	st = status
+	ch = checkout
+	am = commit --amend --no-edit
+[filter "strongbox"]
+	clean = strongbox -clean %f
+	smudge = strongbox -smudge %f
+	required = true
+[diff "strongbox"]
+	textconv = strongbox -diff
+[credential]
+	helper = osxkeychain
+[diff]
+	tool = vscode
+[difftool]
+	prompt = false
+[difftool "vscode"]
+	cmd = "code --wait --diff  "
+[core]
+	excludesfile = /Users/ryanfrench/.gitignore
+[push]
+	default = current
