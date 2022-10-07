@@ -25,6 +25,9 @@ choco install poshgit -y
 echo 'Install vscode'
 choco install vscode -y
 
+echo 'Install neovim'
+choco install neovim -y
+
 echo 'Install notepad++'
 choco install notepadplusplus -y
 
