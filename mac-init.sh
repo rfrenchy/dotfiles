@@ -14,3 +14,6 @@ git clone https://github.com/preservim/nerdtree.git ~/.vim/bundle/nerdtree
 # Vim - Toast Color Theme
 mkdir -p ~/.vim/colors
 curl -o ~/.vim/colors/toast.vim https://raw.githubusercontent.com/jsit/toast.vim/master/colors/toast.vim
+
+# Vim - Go
+git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
