@@ -10,3 +10,7 @@ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 # Vim - Nerd Tree
 git clone https://github.com/preservim/nerdtree.git ~/.vim/bundle/nerdtree
+
+# Vim - Toast Color Theme
+mkdir -p ~/.vim/colors
+curl -o ~/.vim/colors/toast.vim https://raw.githubusercontent.com/jsit/toast.vim/master/colors/toast.vim
