@@ -1,13 +1,3 @@
 # Dotfiles
 
-- dev env setup scripts
-
-## macOS
-
-TODO
-
-## Windows
-
-``` 
-   ./init.ps1
-```
+Dev machine set up scripts
