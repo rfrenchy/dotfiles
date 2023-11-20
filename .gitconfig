@@ -1,26 +1,16 @@
 [user]
 	name = rfrenchy
-	email = ryanfrench@outlook.com # change this if needed
+	email = ryanfrench@outlook.com
 [alias]
 	br = branch
 	st = status
 	ch = checkout
 	am = commit --amend --no-edit
-[filter "strongbox"]
-	clean = strongbox -clean %f
-	smudge = strongbox -smudge %f
-	required = true
-[diff "strongbox"]
-	textconv = strongbox -diff
-[credential]
-	helper = osxkeychain
-[diff]
-	tool = vscode
 [difftool]
 	prompt = false
-[difftool "vscode"]
-	cmd = "code --wait --diff  "
 [core]
 	excludesfile = /Users/ryanfrench/.gitignore
 [push]
 	default = current
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
