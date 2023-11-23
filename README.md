@@ -1,5 +1,0 @@
-# dotfiles
-
-## .gitconfig
-
-## init.lua 
