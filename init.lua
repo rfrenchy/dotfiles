@@ -28,6 +28,7 @@ vim.cmd("set t_Co=256")
 -- misc
 vim.cmd("filetype plugin indent on")
 vim.cmd("syntax on")
+-- vim.cmd("colorscheme solarized-osaka")
 
 -- file browser
 vim.g.netrw_banner       = 0
@@ -46,19 +47,20 @@ vim.cmd([[
 
                 Plug 'vim-airline/vim-airline'
                 Plug 'ryanoasis/vim-devicons' 
-                Plug 'sheerun/vim-polygot'
-                Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'yarn install'}
+                " Plug 'sheerun/vim-polygot'
                 Plug 'plasticboy/vim-markdown'
-
                 Plug 'airblade/vim-gitgutter'
-                Plug 'antonk52/bad-practices.nvim'
+
                 Plug 'preservim/nerdtree'
+                Plug 'dracula/vim', { 'as': 'dracula' }
 
         call plug#end()
   ]])
 
--- require('bad_practices.nvm').setup({
---        most_splits = 3,
---        most_tabs   = 3,
---        max_hjkl    = 10,
---})
+vim.g.dracula_colorterm = 0
+vim.cmd("colorscheme dracula")
+
+vim.cmd([[
+        autocmd BufWinLeave *.go mkview
+        autocmd BufWinEnter *.go silent loadview
+]])
