@@ -1,0 +1,3 @@
+-- brew
+-- brew install neovim
+-- brew install gotags
