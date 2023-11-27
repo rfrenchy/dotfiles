@@ -40,6 +40,37 @@ vim.g.netrw_winsize      = 25
 vim.g.netrw_keepdir         = 0
 vim.g.netrw_localcopydircmd = "cp -r"
 
+vim.g.tagbar_type_go = [[{
+	\ 'ctagstype' : 'go',
+	\ 'kinds'     : [
+		\ 'p:package',
+		\ 'i:imports:1',
+		\ 'c:constants',
+		\ 'v:variables',
+		\ 't:types',
+		\ 'n:interfaces',
+		\ 'w:fields',
+		\ 'e:embedded',
+		\ 'm:methods',
+		\ 'r:constructor',
+		\ 'f:functions'
+	\ ],
+	\ 'sro' : '.',
+	\ 'kind2scope' : {
+		\ 't' : 'ctype',
+		\ 'n' : 'ntype'
+	\ },
+	\ 'scope2kind' : {
+		\ 'ctype' : 't',
+		\ 'ntype' : 'n'
+	\ },
+	\ 'ctagsbin'  : 'gotags',
+	\ 'ctagsargs' : '-sort -silent'
+\ }]]
+
+
+-- TODO GET vim-better-whitespace working
+
 -- plugins
 vim.cmd([[
 
@@ -52,6 +83,7 @@ vim.cmd([[
                 Plug 'airblade/vim-gitgutter'
 
                 Plug 'preservim/nerdtree'
+                Plug 'ntpeters/vim-better-whitespace'
                 Plug 'dracula/vim', { 'as': 'dracula' }
 
         call plug#end()
@@ -64,3 +96,7 @@ vim.cmd([[
         autocmd BufWinLeave *.go mkview
         autocmd BufWinEnter *.go silent loadview
 ]])
+
+vim.g.better_whitespace_ctermcolor='red'
+vim.g.better_whitespace_enabled=1
+vim.g.strip_whitespace_on_save=1
