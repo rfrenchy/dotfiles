@@ -1,22 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Frontend
-
-# Chrome
-alias chrome="open -a 'Google Chrome'"
-alias meet="open -a 'Google Chrome' https://meet.google.com/new"
-
-# Kubernetes
-alias k="kubectl "
-alias kd="kubectl --context=dev-merit "
-alias kp="kubectl --context=prod-aws "
-
-# Misc
-alias m="glow"
-alias z="code ~/.zshrc"
-alias zz="exec zsh"
-alias goo="web_search google "
 alias guid="uuidgen | tr '[:upper:]' '[:lower:]'"
 
 # Path to your oh-my-zsh installation.
@@ -24,8 +8,6 @@ export ZSH="$HOME/.oh-my-zsh"
 
 export PATH=$PATH:~/bin
 export PATH=$PATH:~/go/bin
-
-export KUBECONFIG="$HOME/.kube/config"
 
 
 # Set name of the theme to load --- if set to "random", it will
