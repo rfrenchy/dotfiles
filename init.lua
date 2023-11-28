@@ -1,11 +1,27 @@
--- Transitioning from init.vim to init.lua
--- **** LUA LUA LUA LUA LUA LUA LUA LUA LUA ****
---
+-- init.lua
 -- vim.cmd("...") to call directly into vim.cmd and do normal stuff
 -- vim.opt. to set an option
 
 -- options
-vim.opt.background  = "dark"
+-- vim.opt.background  = "dark"
+
+-- plugins
+vim.cmd([[
+
+        call plug#begin('/home/ryan/.local/share/nvim/plugged')
+
+                Plug 'vim-airline/vim-airline'
+                Plug 'ryanoasis/vim-devicons' 
+                Plug 'plasticboy/vim-markdown'
+                Plug 'airblade/vim-gitgutter'
+
+                Plug 'preservim/nerdtree'
+                Plug 'ntpeters/vim-better-whitespace'
+                Plug 'morhetz/gruvbox'
+
+        call plug#end()
+  ]])
+
 vim.opt.clipboard   = "unnamedplus"
 vim.opt.completeopt = "noinsert,menuone,noselect"
 vim.opt.hidden      = true
@@ -23,12 +39,13 @@ vim.opt.expandtab   = true
 vim.opt.shiftwidth  = 8
 vim.opt.tabstop     = 8
 
+-- true color?
 vim.cmd("set t_Co=256")
 
 -- misc
 vim.cmd("filetype plugin indent on")
 vim.cmd("syntax on")
--- vim.cmd("colorscheme solarized-osaka")
+vim.cmd("set termguicolors")
 
 -- file browser
 vim.g.netrw_banner       = 0
@@ -71,31 +88,20 @@ vim.g.tagbar_type_go = [[{
 
 -- TODO GET vim-better-whitespace working
 
--- plugins
+
+-- vim.g.dracula_colorterm = 0
+-- vim.cmd("colorscheme dracula")
 vim.cmd([[
-
-        call plug#begin()
-
-                Plug 'vim-airline/vim-airline'
-                Plug 'ryanoasis/vim-devicons' 
-                " Plug 'sheerun/vim-polygot'
-                Plug 'plasticboy/vim-markdown'
-                Plug 'airblade/vim-gitgutter'
-
-                Plug 'preservim/nerdtree'
-                Plug 'ntpeters/vim-better-whitespace'
-                Plug 'dracula/vim', { 'as': 'dracula' }
-
-        call plug#end()
-  ]])
-
-vim.g.dracula_colorterm = 0
-vim.cmd("colorscheme dracula")
+	set background=light
+	colorscheme gruvbox
+]])
 
 vim.cmd([[
         autocmd BufWinLeave *.go mkview
         autocmd BufWinEnter *.go silent loadview
 ]])
+
+
 
 vim.g.better_whitespace_ctermcolor='red'
 vim.g.better_whitespace_enabled=1
