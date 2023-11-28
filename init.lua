@@ -91,14 +91,11 @@ vim.g.tagbar_type_go = [[{
 
 -- vim.g.dracula_colorterm = 0
 -- vim.cmd("colorscheme dracula")
-vim.cmd([[
-	set background=light
-	colorscheme gruvbox
-]])
 
 vim.cmd([[
         autocmd BufWinLeave *.go mkview
-        autocmd BufWinEnter *.go silent loadview
+        autocmd BufWinEnter *.go silent loadview | colorscheme gruvbox
+        autocmd BufWinEnter *.json colorscheme gruvbox | set background=light
 ]])
 
 
