@@ -14,3 +14,6 @@ brew install postgresql@16
 brew install python@3.11
 brew install tmux -- mUlTiPlExEr
 brew install virtualenv -- depency of: https://github.com/ms-jpq/chadtree (nvim plugin)
+
+
+brew install --cask alacritty
