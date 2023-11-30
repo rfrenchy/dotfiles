@@ -11,11 +11,13 @@ vim.cmd([[
         call plug#begin('/home/ryan/.local/share/nvim/plugged')
 
                 Plug 'vim-airline/vim-airline'
-                Plug 'ryanoasis/vim-devicons' 
+                Plug 'ryanoasis/vim-devicons'
                 Plug 'plasticboy/vim-markdown'
                 Plug 'airblade/vim-gitgutter'
 
-                Plug 'preservim/nerdtree'
+                " Plug 'preservim/nerdtree'
+                Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
+
                 Plug 'ntpeters/vim-better-whitespace'
                 Plug 'morhetz/gruvbox'
 
@@ -48,14 +50,14 @@ vim.cmd("syntax on")
 vim.cmd("set termguicolors")
 
 -- file browser
-vim.g.netrw_banner       = 0
-vim.g.netrw_liststyle    = 0
-vim.g.netrw_browse_split = 4
-vim.g.netrw_altv         = 1
-vim.g.netrw_winsize      = 25
-
-vim.g.netrw_keepdir         = 0
-vim.g.netrw_localcopydircmd = "cp -r"
+--vim.g.netrw_banner       = 0
+--vim.g.netrw_liststyle    = 0
+--vim.g.netrw_browse_split = 4
+--vim.g.netrw_altv         = 1
+--vim.g.netrw_winsize      = 25
+--
+--vim.g.netrw_keepdir         = 0
+--vim.g.netrw_localcopydircmd = "cp -r"
 
 vim.g.tagbar_type_go = [[{
 	\ 'ctagstype' : 'go',
@@ -85,16 +87,17 @@ vim.g.tagbar_type_go = [[{
 	\ 'ctagsargs' : '-sort -silent'
 \ }]]
 
-
--- TODO GET vim-better-whitespace working
-
-
 -- vim.g.dracula_colorterm = 0
 -- vim.cmd("colorscheme dracula")
 
 vim.cmd([[
-        autocmd BufWinLeave *.go mkview
-        autocmd BufWinEnter *.go silent loadview | colorscheme gruvbox
+        augroup _folds
+                autocmd!
+                autocmd BufWinLeave * mkview
+                autocmd BufWinEnter * silent! loadview
+        augroup END
+
+        autocmd BufWinEnter *.go colorscheme gruvbox
         autocmd BufWinEnter *.json colorscheme gruvbox | set background=light
 ]])
 
@@ -103,3 +106,4 @@ vim.cmd([[
 vim.g.better_whitespace_ctermcolor='red'
 vim.g.better_whitespace_enabled=1
 vim.g.strip_whitespace_on_save=1
+vim.g.strip_whitespace_confirm=0
