@@ -15,5 +15,7 @@ brew install python@3.11
 brew install tmux -- mUlTiPlExEr
 brew install virtualenv -- depency of: https://github.com/ms-jpq/chadtree (nvim plugin)
 
+brew install tpm -- tmux plugin manager
 
-brew install --cask alacritty
+-- can't install casks on linux
+--brew install --cask alacritty
