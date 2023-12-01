@@ -1,6 +1,6 @@
 # dotfiles
 
-- [] zsh
-- [] tmux
-- [] git aliases & defaults
-- [] nvim & nvim config
+- [ ] zsh
+- [ ] tmux
+- [ ] git aliases & defaults
+- [ ] nvim & nvim config
