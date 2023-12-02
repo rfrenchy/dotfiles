@@ -6,9 +6,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 source ~/.nvm/nvm.sh
 
-alias kubectl="kubecolor"
 alias py="python3 "
-alias move="mv"
 
 alias whatsmyip="curl ifconfig.me"
 alias vpn="sudo openvpn --data-ciphers 'AES-256-CBC' --config /etc/openvpn/ovpn_tcp/$(ls /etc/openvpn/ovpn_tcp | grep -i -e uk | shuf -n 1)"
@@ -19,7 +17,7 @@ alias cdh='cd ~/dev/horse_racing'
 alias anki="/usr/local/bin/anki-23.10.1-linux-qt6/anki &"
 alias nv="nvim "
 alias copy="xclip -selection clipboard"
-
+alias lll="eza --long --tree --level 3"
 
 ZSH_THEME="eastwood"
 HYPHEN_INSENSITIVE="true"
