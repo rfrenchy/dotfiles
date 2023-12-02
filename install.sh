@@ -12,10 +12,13 @@ brew install pipx -- python package management
 
 brew install postgresql@16
 brew install python@3.11
-brew install tmux -- mUlTiPlExEr
+
 brew install virtualenv -- depency of: https://github.com/ms-jpq/chadtree (nvim plugin)
 
+brew install eza -- modern ls
+
+brew install tmux -- mUlTiPlExEr
 brew install tpm -- tmux plugin manager
 
--- can't install casks on linux
---brew install --cask alacritty
+-- *** can't install casks on linux so switch to apt ***
+apt install alacritty --brew install --cask alacritty
