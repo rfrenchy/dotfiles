@@ -1,7 +1,7 @@
 mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
 
 brew install bat -- fancy cat
-brew install bottom -- fancy sys info
+brew install bottom -- fancy system monitor
 brew install git
 brew install gotags
 
@@ -16,6 +16,7 @@ brew install python@3.11
 brew install virtualenv -- depency of: https://github.com/ms-jpq/chadtree (nvim plugin)
 
 brew install eza -- modern ls
+brew install inotify-tools
 
 brew install tmux -- mUlTiPlExEr
 brew install tpm -- tmux plugin manager
