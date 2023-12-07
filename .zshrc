@@ -3,6 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+export XDG_CONFIG_HOME="$HOME/.config"
 
 source ~/.nvm/nvm.sh
 
@@ -12,12 +13,16 @@ alias whatsmyip="curl ifconfig.me"
 alias vpn="sudo openvpn --data-ciphers 'AES-256-CBC' --config /etc/openvpn/ovpn_tcp/$(ls /etc/openvpn/ovpn_tcp | grep -i -e uk | shuf -n 1)"
 alias zshrc='nvim ~/.zshrc'
 alias nvimrc='nvim ~/.config/nvim/init.lua'
-alias cdh='cd ~/dev/horse_racing'
+alias cdh='cd ~/dev/punts'
 
 alias anki="/usr/local/bin/anki-23.10.1-linux-qt6/anki &"
-alias nv="nvim "
 alias copy="xclip -selection clipboard"
+
 alias lll="eza --long --tree --level 3"
+alias llll="eza --long --tree --level 4"
+alias lh="eza-tree 'tools|vendor'"
+
+alias 7zip="7zz "
 
 ZSH_THEME="eastwood"
 HYPHEN_INSENSITIVE="true"
@@ -34,6 +39,7 @@ export PATH="$PATH:/home/ryan/.local/bin"
 export PATH="/home/linuxbrew/.linuxbrew/opt/postgresql@16/bin:$PATH"
 export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 export PATH="/home/ryan/go/bin:$PATH"
+export PATH="/home/ryan/dev/scripts:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
