@@ -17,6 +17,7 @@ brew install virtualenv -- depency of: https://github.com/ms-jpq/chadtree (nvim 
 
 brew install eza -- modern ls
 brew install inotify-tools
+brew install imagemagick
 
 brew install tmux -- mUlTiPlExEr
 brew install tpm -- tmux plugin manager
