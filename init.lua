@@ -11,15 +11,14 @@ vim.cmd([[
         call plug#begin('/home/ryan/.local/share/nvim/plugged')
 
                 Plug 'vim-airline/vim-airline'
-                Plug 'ryanoasis/vim-devicons'
                 Plug 'plasticboy/vim-markdown'
                 Plug 'airblade/vim-gitgutter'
-
-                " Plug 'preservim/nerdtree'
-                Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
-
                 Plug 'ntpeters/vim-better-whitespace'
-                Plug 'morhetz/gruvbox'
+                Plug 'https://gitlab.com/protesilaos/tempus-themes-vim.git'
+                Plug 'freitass/todo.txt-vim'
+
+                Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
 
         call plug#end()
   ]])
@@ -91,14 +90,14 @@ vim.g.tagbar_type_go = [[{
 -- vim.cmd("colorscheme dracula")
 
 vim.cmd([[
-        augroup _folds
+        augroup remember_folds
                 autocmd!
                 autocmd BufWinLeave * mkview
                 autocmd BufWinEnter * silent! loadview
         augroup END
 
-        autocmd BufWinEnter *.go colorscheme gruvbox
-        autocmd BufWinEnter *.json colorscheme gruvbox | set background=light
+        autocmd BufWinEnter *.go colorscheme tempus_night
+        autocmd BufWinEnter *.json | *.txt colorscheme tempus_tempest
 ]])
 
 
