@@ -22,5 +22,10 @@ brew install imagemagick
 brew install tmux -- mUlTiPlExEr
 brew install tpm -- tmux plugin manager
 
+# fonts for note taking
+brew tap homebrew/cask-fonts
+brew install font-hack-nerd-font
+
+
 -- *** can't install casks on linux so switch to apt ***
 apt install alacritty --brew install --cask alacritty
