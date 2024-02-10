@@ -31,6 +31,7 @@ brew install font-hack-nerd-font
 -- *** can't install casks on linux so switch to apt ***
 apt install alacritty --brew install --cask alacritty
 
--- windows managers
+-- Desktop X
 apt install i3 - window manager
 apt install picom -- composittor
+apt install nitrogen -- wallpaper
