@@ -9,6 +9,7 @@ brew install jq -- json helper
 brew install lolcat 
 brew install openvpn
 brew install pipx -- python package management 
+brew install fzf -- fuzzy search
 
 brew install postgresql@16
 brew install python@3.11
